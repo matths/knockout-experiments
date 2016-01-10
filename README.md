@@ -2,6 +2,8 @@
 
 knockout.js is a nice MVVM (Model View ViewModel) framework for easily binding values to DOM elements (View), with a small footprint, and is good for rapid prototyping.
 
+You can open the example directly at http://matths.github.io/knockout-experiments/ and look into the source using the developer tools of your favourite browser.
+
 ## custom elements
 
 It also enables the creation of custom html dom elements (close to web components) with the same kind of binding.
@@ -14,6 +16,9 @@ I just started building a basic example. So far it offers insights two the follo
 * creation / use of custom elements
 * mode switching (view/edit)
 * custom attributes (knockout.js itself offers just the data-bind attribute for components and the params attribute for custom elements)
+
+using https://github.com/SteveSanderson/ko-custom-elems-test/blob/master/lib/knockout-customElements.js by @SteveSanderson
+
 
 ```
 <editable-label content="{{yourContentVar}}"></editable-label>
