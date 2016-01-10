@@ -14,12 +14,12 @@ ko.components.register('editable-label', {
 });
 
 // custom element with custom element reuse
-ko.components.register('name-labels', {
+ko.components.register('name-form', {
 	viewModel: function(params) {
-		this.firstname = params.fn;
-		this.lastname = params.ln;
+		this.firstname = params.firstname;
+		this.lastname = params.lastname;
 	},
 	template:
-		'<editable-label params="content: firstname"></editable-label>\
-		<editable-label params="content: lastname"></editable-label>'
+		'<editable-label content="{{firstname}}"></editable-label>\
+		<editable-label content="{{lastname}}"></editable-label>'
 });

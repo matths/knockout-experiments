@@ -8,15 +8,16 @@
 		<link rel="stylesheet" href="css/styles.css">
 
 		<script type="text/javascript" src="js/lib/knockout-3.4.0.debug.js"></script>
+		<script type="text/javascript" src="js/lib/knockout-customElementsWithCustomAttributes.js"></script>
 
 		<script type="text/javascript" src="js/customElementDefinitions.js"></script>
 	</head>
 	<body>
 
-		<editable-label params="content: lastname"></editable-label>
+		<editable-label content="{{lastname}}"></editable-label>
 		<hr>
 
-		<name-labels params="fn: firstname, ln: lastname"></name-labels>
+		<name-form firstname="{{firstname}}" lastname="{{lastname}}"></name-form>
 		<hr>
 
 		<strong data-bind="text: fullname"></strong>
