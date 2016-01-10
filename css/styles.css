@@ -1,0 +1,22 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+editable-label span,
+editable-label input{
+	font-family: Arial;
+	font-size: 12px;
+	line-height: 1.2em;
+	padding: 1px 3px;
+	margin 0;
+	border: 1px solid transparent;
+}
+editable-label input{
+	border: 1px dashed #999;
+	outline: none;
+}
+
+

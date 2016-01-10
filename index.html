@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+
+		<title>Knockout experiments</title>
+
+		<link rel="stylesheet" href="css/styles.css">
+
+		<script type="text/javascript" src="js/lib/knockout-3.4.0.debug.js"></script>
+
+		<script type="text/javascript" src="js/customElementDefinitions.js"></script>
+	</head>
+	<body>
+
+		<editable-label params="content: lastname"></editable-label>
+		<hr>
+
+		<name-labels params="fn: firstname, ln: lastname"></name-labels>
+		<hr>
+
+		<strong data-bind="text: fullname"></strong>
+
+		<script type="text/javascript">
+
+			// global ViewModel
+			function VM(params) {
+				this.firstname = ko.observable("Fred");
+				this.lastname = ko.observable("Flintstone");
+				this.fullname = ko.computed(function () {
+					return this.firstname() + " " + this.lastname();
+				}, this, { pure: true });
+			};
+			// instance
+			var vm = new VM();
+			ko.applyBindings(vm);
+
+		</script>
+	</body>
+</html>
