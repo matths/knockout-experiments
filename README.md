@@ -11,9 +11,20 @@ It also enables the creation of custom html dom elements (close to web component
 
 I just started building a basic example. So far it offers insights two the following stuff:
 
-* using custom elements
-* creating elements with mode switching (view/edit)
-* allow custom attributes (knockout.js itself offers just data-bind for components and params for custom elements attributes, only)
+* creation / use of custom elements
+* mode switching (view/edit)
+* custom attributes (knockout.js itself offers just the data-bind attribute for components and the params attribute for custom elements)
+
+```
+<editable-label content="{{yourContentVar}}"></editable-label>
+```
+
+* reuse of custom elements
+
+```
+<name-form firstname="{{firstname}}" lastname="{{lastname}}"></name-form>
+```
+
 
 ## applications using knockout.js
 
