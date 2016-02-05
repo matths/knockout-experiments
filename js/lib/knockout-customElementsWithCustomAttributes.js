@@ -6,7 +6,7 @@
 		};
 
 		function _nodeIsCustomComponentElement (node) {
-			var noParams = node.getAttribute('params') === null;
+			var noParams = !node.getAttribute || node.getAttribute('params') === null;
 			// return node && (node.nodeType === 1) && ko.components.isRegistered(node.tagName.toLowerCase()) && noParams;
 			return node && (node.nodeType === 1) && ko.components['getComponentNameForNode'](node) && noParams;
 		}
